@@ -7,7 +7,6 @@ const path = require('path');
 
 
 const routerObjProd = require("./routes/productsRoute")
-const routerObjUser = require("./routes/usersRoute")
 
 
 // -------creating a new file for routes (routes>project.js) and require into the index file ---------------------
@@ -19,7 +18,6 @@ server.use(express.static(path.resolve(__dirname,process.env.PUBLIC_DIR))); //fo
 
 
 server.use('/products', routerObjProd.router);
-server.use('/users', routerObjUser.router);
 
 
 // -------------------------put this in the last-------------------------(v.v.imp)
