@@ -1,7 +1,7 @@
 const express = require("express");
 const server = express();
 
-const fs = require('fs');
+// const fs = require('fs');
 // const demoString = fs.readFileSync('demo.json', 'utf-8');
 // const demo = JSON.parse(demoString);
 // const products = demo.products;
