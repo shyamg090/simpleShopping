@@ -23,7 +23,7 @@ server.use('/products', routerObjProd.router);
 // -------------------------put this in the last-------------------------(v.v.imp)
 //to use the react single page index file
 server.use('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
+    res.sendFile(path.resolve(__dirname, process.env.PUBLIC_DIR, 'index.html'));
 }) 
 
 
