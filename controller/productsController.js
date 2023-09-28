@@ -14,10 +14,10 @@ const Product = model.Product;
 exports.createProduct = (req, res) => { //post
 
     const product = new Product(req.body);
-    console.log(product);
+    // console.log(product);
 
     product.save().then((msg) => {
-        console.log(msg);
+        // console.log(msg);
         res.status(200).json(product);
     })
 
@@ -26,13 +26,13 @@ exports.createProduct = (req, res) => { //post
 exports.getAllFun = async(req, res) => { //get
     const products = await Product.find();
     res.json(products);
-    console.log(products);
+    // console.log(products);
 }
 
 exports.getFun = async(req, res) => { //get
     //get the id from the url using .params.id
     const id = req.params.id;
-    console.log(id);
+    // console.log(id);
     //find the product that has the same id
     const product = await Product.findById(id);
     //send the response as found / matched id
@@ -40,12 +40,12 @@ exports.getFun = async(req, res) => { //get
 }
 
 
-exports.postFun = (req, res) => { //
-    console.log(req.body);
-    //push the req.body to the end of the products array
-    Product.insertOne(req.body);
-    res.json(req.body);
-}
+// exports.postFun = (req, res) => { //
+//     console.log(req.body);
+//     //push the req.body to the end of the products array
+//     Product.insertOne(req.body);
+//     res.json(req.body);
+// }
 
 exports.replaceFun = async(req, res) => { //put
     // req.params.id ---> gives "2" string of number ---> to convert it into number 2 = +"2"
