@@ -27,6 +27,6 @@ server.use('*', (req, res) => {
 }) 
 
 
-server.listen(process.env.PORT, () => {
+server.listen(4002, () => {
     console.log('server started');
 })
