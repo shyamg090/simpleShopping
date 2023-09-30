@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express'); //2-3 to create a server
 const server = express();
 const cors = require('cors');
-const morgan = require('morgan');
+// const morgan = require('morgan');
 
 const path = require('path');
 
@@ -14,7 +14,7 @@ const routerObjProd = require("./routes/productsRoute")
 //-----------------------MIDDLEWARE-------------------------------------
 server.use( cors() );
 server.use(express.json());
-server.use(morgan('default'));
+// server.use(morgan('default'));
 server.use(express.static(path.resolve(__dirname,process.env.PUBLIC_DIR))); //for the html file to in public folder
 
 
